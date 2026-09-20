@@ -2,25 +2,27 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#3157d5">
 <meta name="description" content="SAK — catatan keuangan pribadi">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon.svg">
+<link rel="apple-touch-icon" href="icons/icon.svg">
 <link rel="stylesheet" href="style.css">
-<title>SAK — Personal Finance</title>
+<title>SAK — Catatan Keuangan</title>
 </head>
 <body>
 <div id="app">
-<header><div><small>Catatan Keuangan</small><h1>SAK</h1></div></header>
+<header class="topbar"><div><small>Catatan Keuangan</small><h1>SAK</h1></div><button id="lockBtn" class="icon-btn" title="Kunci aplikasi" hidden>🔒</button></header>
 <main id="screen"></main>
-<nav class="bottom">
+<nav class="bottom" aria-label="Navigasi utama">
 <button data-route="home">⌂<span>Beranda</span></button>
 <button data-route="transactions">▤<span>Transaksi</span></button>
 <button data-route="reports">◔<span>Laporan</span></button>
 <button data-route="settings">⚙<span>Pengaturan</span></button>
 </nav>
-<div id="toast"></div>
+<div id="toast" role="status"></div>
+<div id="modal"></div>
 </div>
 <script src="app.js"></script>
 </body>
