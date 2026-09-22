@@ -39,7 +39,7 @@ function home(tx){
  const t=totals(tx),recent=[...tx].sort((a,b)=>b.date-a.date||b.id-a.id).slice(0,5),hidden=state.settings.hideBalance&&!balanceRevealed;
  const homeRow=x=>{const icon=iconFor(x),kind=x.type==='income'?'income':'expense';return `<button class="home-tx" onclick="detail(${x.id})"><span class="home-tx-icon ${kind}">${esc(icon)}</span><span class="home-tx-main"><strong>${esc(x.category)}</strong><small>${x.note?esc(x.note):dt(x.date)}</small></span><b class="${kind}">${x.type==='income'?'+':'−'} ${money(x.amount)}</b></button>`};
  document.querySelector('#screen').innerHTML=`<section class="page home-page">
- <header class="home-greeting"><div><h2>Halo, 👋</h2><p>Mau mencatat apa hari ini?</p></div><button class="home-notify" aria-label="Notifikasi" onclick="toggleNotifications()">♧<i></i></button></header>
+ <header class="home-greeting"><div><h2>Halo, 👋</h2><p>Mau mencatat apa hari ini?</p></div><button class="home-notify" aria-label="Notifikasi" onclick="toggleNotifications()">🔔${notifications.length?'<i></i>':''}</button></header>
  <button class="hero hero-home" type="button" onclick="toggleBalanceVisibility()" aria-label="${hidden?'Tampilkan':'Sembunyikan'} saldo">
    <div class="hero-top"><span class="hero-label"><span class="hero-wallet">▰</span> Saldo <span class="hero-eye">${hidden?'◉':'◌'}</span></span><span class="hero-arrow">›</span></div>
    <div class="balance">${hidden?'••••••':money(t.income-t.expense)}</div>
