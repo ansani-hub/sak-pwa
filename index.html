@@ -8,12 +8,12 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon.svg">
 <link rel="apple-touch-icon" href="icons/icon.svg">
-<link rel="stylesheet" href="style.css?v=1.4">
+<link rel="stylesheet" href="style.css?v=1.5">
 <title>SAK — Catatan Keuangan</title>
 </head>
 <body>
 <div id="app">
-<header class="topbar"><div><small>Catatan Keuangan</small><h1>SAK</h1></div><button id="lockBtn" class="icon-btn" title="Kunci aplikasi" hidden>🔒</button></header>
+<header class="topbar"><div><small>Catatan Keuangan</small><h1>SAK</h1></div><button id="lockBtn" class="icon-btn" title="Kunci aplikasi" hidden aria-label="Kunci aplikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></button></header>
 <main id="screen"></main>
 <nav class="bottom" aria-label="Navigasi utama">
 <button data-route="home">⌂<span>Beranda</span></button>
@@ -24,6 +24,6 @@
 <div id="toast" role="status"></div>
 <div id="modal"></div>
 </div>
-<script src="app.js?v=1.4"></script>
+<script src="app.js?v=1.5"></script>
 </body>
 </html>

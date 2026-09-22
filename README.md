@@ -1,21 +1,5 @@
 # SAK PWA V1.5
 
-Catatan Keuangan Pribadi — by ansani.
+Paket HP-only yang bersih. Upload isi folder ini langsung ke root repository.
 
-## V1.5
-- Beranda diperbarui dengan UI lebih modern, compact, dan responsif.
-- Nominal transaksi otomatis menggunakan pemisah ribuan format Indonesia (contoh 1.000.000).
-- PDF dibuka langsung pada viewer PDF perangkat/browser agar pengguna bisa memilih download/simpan.
-- Offline-first dengan IndexedDB.
-- Backup/restore JSON, CSV, Excel, PDF.
-- Kategori pemasukan/pengeluaran.
-- Edit/hapus transaksi, receipt opsional.
-- Tema System/Light/Dark.
-
-## Struktur
-- index.html
-- app.js
-- style.css
-- manifest.json
-- sw.js
-- icons/icon.svg
+Perubahan: statistik Beranda bulanan, tren line chart 7 titik + detail, setting tiles, ikon notifikasi line-art, cache V1.5, dan PDF nominal tanpa karakter non-ASCII.
