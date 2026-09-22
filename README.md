@@ -1,8 +1,8 @@
-# SAK PWA V1.3
+# SAK PWA V1.4
 
 Catatan Keuangan Pribadi — by ansani.
 
-## V1.3
+## V1.4
 - Beranda diperbarui dengan UI lebih modern, compact, dan responsif.
 - Nominal transaksi otomatis menggunakan pemisah ribuan format Indonesia (contoh 1.000.000).
 - PDF dibuka langsung pada viewer PDF perangkat/browser agar pengguna bisa memilih download/simpan.

@@ -12,10 +12,10 @@ html.dark{--bg:#0d1119;--surface:#151b26;--surface2:#202836;--text:#edf1f8;--mut
 .home-greeting{display:flex;align-items:center;justify-content:space-between;margin:0 2px 18px}
 .home-greeting h2{margin:0;font-size:25px;letter-spacing:-.03em}
 .home-greeting p{margin-top:2px;color:var(--muted);font-size:14px}
-.home-notify{position:relative;width:44px;height:44px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:15px;font-size:22px;box-shadow:var(--shadow)}
+.home-notify{position:relative;width:44px;height:44px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:15px;font-size:22px;box-shadow:none;transition:background .18s ease,transform .18s ease}.home-notify:active{transform:scale(.96);background:var(--surface2)}
 .home-notify i{position:absolute;right:9px;top:8px;width:7px;height:7px;border-radius:50%;background:#e05252;border:2px solid var(--surface);box-sizing:content-box}
-.hero-home{padding:18px 22px 19px;margin:0 0 20px;border-radius:25px;text-align:left;position:relative;overflow:hidden;min-height:210px}
-.hero-home:after{content:"";position:absolute;width:220px;height:150px;right:-80px;bottom:-80px;border-radius:50%;background:rgba(255,255,255,.12);pointer-events:none}
+.hero-home{width:100%;padding:20px 22px 20px;margin:0 0 22px;border:0;border-radius:26px;text-align:left;position:relative;overflow:hidden;min-height:212px;box-shadow:none}
+.hero-home:after{content:"";position:absolute;width:300px;height:190px;right:-110px;bottom:-115px;border-radius:50%;background:rgba(255,255,255,.10);filter:blur(2px);pointer-events:none}
 .hero-home .hero-top,.hero-home .hero-stats,.hero-home .balance,.hero-home .hero-divider{position:relative;z-index:1}
 .hero-top{display:flex;align-items:center;justify-content:space-between}
 .hero-label{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:650}
@@ -33,7 +33,7 @@ html.dark{--bg:#0d1119;--surface:#151b26;--surface2:#202836;--text:#edf1f8;--mut
 .stat-dot.income{color:#54e3ad}.stat-dot.expense{color:#ff7b7b}
 .home-section-title{margin:4px 4px 10px}.home-section-title h3{font-size:18px}
 .quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-.quick-card{border:1px solid var(--border);min-height:92px;border-radius:19px;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow);transition:.16s transform,.16s box-shadow}
+.quick-card{border:1px solid var(--border);min-height:92px;border-radius:19px;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:none;transition:.16s transform,.16s background}
 .quick-card:active{transform:scale(.985)}
 .quick-card.income{background:linear-gradient(180deg,rgba(19,155,104,.10),rgba(19,155,104,.04));color:var(--income);border-color:rgba(19,155,104,.14)}
 .quick-card.expense{background:linear-gradient(180deg,rgba(224,82,82,.10),rgba(224,82,82,.04));color:var(--expense);border-color:rgba(224,82,82,.14)}
@@ -49,3 +49,5 @@ html.dark{--bg:#0d1119;--surface:#151b26;--surface2:#202836;--text:#edf1f8;--mut
 .home-tx-main{flex:1;min-width:0;display:grid;gap:2px}.home-tx-main strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-tx-main small{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px}.home-tx>b{font-size:13px;white-space:nowrap}
 .dark .home-notify{box-shadow:none}.dark .quick-card{box-shadow:none}.dark .home-list{box-shadow:none}
 @media(max-width:380px){.hero-home .balance{font-size:30px}.hero-stats strong{font-size:13px}.home-tx{padding-left:12px;padding-right:12px}.home-tx>b{font-size:12px}}
+
+.calendar-btn{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:14px;min-width:46px;padding:10px 13px;font-size:18px}.calendar-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}.date-range{display:flex;align-items:end;gap:8px;margin:-3px 0 15px;overflow:auto}.date-range label{min-width:140px;font-size:12px;color:var(--muted);display:grid;gap:5px}.date-range input{padding:11px}.date-range>span{padding-bottom:12px;color:var(--muted)}.date-range .primary{flex:0 0 auto}
