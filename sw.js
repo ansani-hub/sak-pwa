@@ -1,5 +1,5 @@
-const CACHE='sak-v1.5';
-const FILES=['./','./index.html','./style.css?v=1.4','./app.js?v=1.4','./manifest.json','./icons/icon.svg'];
+const CACHE='sak-v1.6';
+const FILES=['./','./index.html','./style.css?v=1.6','./app.js?v=1.6','./manifest.json','./icons/icon.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);const shell=u.pathname.endsWith('/index.html')||u.pathname.endsWith('/app.js')||u.pathname.endsWith('/style.css')||u.pathname.endsWith('/manifest.json')||u.pathname.endsWith('/sw.js');if(shell){e.respondWith(fetch(e.request).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return res}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))));return}e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return res}).catch(()=>caches.match('./index.html'))));});
